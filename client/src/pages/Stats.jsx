@@ -26,11 +26,11 @@ export default function Stats() {
       <div className="chart">
         <ResponsiveContainer width="100%" height={320}>
           <BarChart data={s.topGenres} margin={{ left: -10 }}>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} />
-            <XAxis dataKey="genre" interval={0} angle={-20} textAnchor="end" height={70} tick={{ fontSize: 12 }} />
-            <YAxis allowDecimals={false} />
-            <Tooltip />
-            <Bar dataKey="count" name="Movies" fill="#6366f1" radius={[6, 6, 0, 0]} />
+            <CartesianGrid stroke="#2A3768" strokeDasharray="3 3" vertical={false} />
+            <XAxis dataKey="genre" interval={0} angle={-20} textAnchor="end" height={70} tick={{ fontSize: 12, fill: '#9AA6CC' }} />
+            <YAxis allowDecimals={false} tick={{ fill: '#9AA6CC' }} />
+            <Tooltip cursor={{ fill: 'rgba(255,255,255,.06)' }} contentStyle={{ background: '#16204A', border: '1px solid #2A3768', borderRadius: 8, color: '#EEF1FB' }} />
+            <Bar dataKey="count" name="Movies" fill="#FFB547" radius={[6, 6, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>

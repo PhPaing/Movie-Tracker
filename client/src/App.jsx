@@ -16,7 +16,7 @@ export default function App() {
   return (
     <>
       <header className="nav">
-        <Link to="/" className="brand">🎬 MovieTracker</Link>
+        <Link to="/" className="brand"><span className="logo" aria-hidden="true">▶</span>MovieTracker</Link>
         <nav>
           <NavLink to="/">Browse</NavLink>
           {auth && <NavLink to="/my-list">My List</NavLink>}
@@ -41,6 +41,13 @@ export default function App() {
           <Route path="/stats" element={<Protected><Stats /></Protected>} />
         </Routes>
       </main>
+      <footer className="footer">
+        <span>Built with ASP.NET Core, EF Core, SQL Server, React and JWT auth.</span>
+        <span>
+          <a href="https://github.com/YOUR-USERNAME/movie-tracker" target="_blank" rel="noreferrer">Source on GitHub</a>
+          {' '}· Movie data from TMDB. Not endorsed or certified by TMDB.
+        </span>
+      </footer>
     </>
   );
 }

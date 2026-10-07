@@ -40,11 +40,11 @@ export default function MovieDetail() {
   if (!movie) return <p className="muted">{msg || 'Loading…'}</p>;
 
   return (
-    <div className="detail">
+    <div className="detail" style={{ '--poster': movie.posterUrl ? `url(${movie.posterUrl})` : 'none' }}>
       <Cover url={movie.posterUrl?.replace('/w342/', '/w780/')} big />
       <div>
         <h1>{movie.title}</h1>
-        <p className="muted">{movie.year ?? ''} · ⭐ {movie.voteAverage.toFixed(1)} on TMDB</p>
+        <p className="muted">Released {movie.year ?? 'n/a'}, rated {movie.voteAverage.toFixed(1)}/10 on TMDB</p>
         <span className="tag">{movie.genre}</span>
         <a className="link" href={`https://www.themoviedb.org/movie/${movie.tmdbId}`} target="_blank" rel="noreferrer"> View on TMDB ↗</a>
         {movie.overview && <p className="overview">{movie.overview}</p>}
