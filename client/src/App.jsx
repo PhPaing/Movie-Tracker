@@ -44,7 +44,7 @@ export default function App() {
       <footer className="footer">
         <span>Built with ASP.NET Core, EF Core, SQL Server, React and JWT auth.</span>
         <span>
-          <a href="https://github.com/YOUR-USERNAME/movie-tracker" target="_blank" rel="noreferrer">Source on GitHub</a>
+          <a href="https://github.com/PhPaing/Movie-Tracker" target="_blank" rel="noreferrer">Source on GitHub</a>
           {' '}· Movie data from TMDB. Not endorsed or certified by TMDB.
         </span>
       </footer>
